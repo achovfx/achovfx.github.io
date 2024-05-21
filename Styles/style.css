@@ -4,7 +4,7 @@
     src: url('../Fonts/auyt.ttf') format('truetype');
     font-weight: normal;
 }
-
+/* Base Styling  */
 :root {
     --bg-color: #161616;
     --bg-color-op: rgba(0, 0, 0,.2);
@@ -52,7 +52,7 @@ section {
     overflow: hidden;
 }
 
-/* Scroll */
+/* Scroll Bar */
 ::-webkit-scrollbar {
     width: 5px;
     height: 2px;
@@ -86,19 +86,6 @@ section {
   ::-webkit-scrollbar-corner {
     background: transparent;
   }
-
-
-/* Blur */
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #9BFF82;
-    animation: floatBlur 8s ease-in-out infinite;
-    z-index: -100;
-}
-.blurRight{
-    position: absolute;
-    right: 5rem;
-}
 
 /* Splash Screen */
 .splashScreen {
@@ -177,6 +164,19 @@ section {
 	z-index: 1;
 	animation: rotateLoader 1.5s linear infinite;
 }
+
+/* Blur Box */
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #9BFF82;
+    animation: floatBlur 8s ease-in-out infinite;
+    z-index: -100;
+}
+.blurRight{
+    position: absolute;
+    right: 5rem;
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -311,7 +311,7 @@ span {
     box-shadow: none;
 }
 
-/* About */
+/* About Section */
 .about{
     display: flex;
     justify-content: space-between;
@@ -384,7 +384,7 @@ span {
     margin: 1rem 0 3rem;
 }
 
-/* Projects */
+/* Projects Section */
 .portfolio{
     background-color: var(--second-bg-color);
 }
@@ -461,7 +461,7 @@ span {
     color: var(--second-bg-color);
 }
 
-/* Contact */
+/* Contact Section */
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -509,7 +509,7 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
-/* Footer */
+/* Footer Section */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -543,6 +543,7 @@ span {
     color: var(--second-bg-color);
 }
 
+/* Animations */
 @keyframes floatImage{
     0% {
         transform: translateY(0);
@@ -623,8 +624,7 @@ span {
     }
 }
 
-/* Animations */
-
+/* Splash Animation */
 @keyframes rotateLoader {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
