@@ -2,12 +2,14 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>رزومه حسین گندمریزی</title>
-
-    <!-- box icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> وبسایت شخصی عرفان گندمریزی </title>
+    <!-- Box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+    <!-- Aos CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Styles/style.css"/>
 </head>
 
 <body>
@@ -51,9 +53,9 @@
         <div class="home-content">
             <div class="blur"></div>
             <div class="blur"></div>
-            <h3>سلام این منم</h3>
-            <h1>حسین گندمریزی</h1>
-            <h3> یک <span>بک اند دولوپر </span></h3>
+            <h3 class="hiH3">سلام</h3>
+            <h1>عرفان گندمریزی هستم</h1>
+            <h3><span id="changerText"></span></h3>
             <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ت</p>
             <div class="social-media">
                 <a href="https://www.instagram.com/acho.vfx"><i class="bx bxl-instagram"></i></a>
@@ -71,10 +73,10 @@
 
     <!-- about section design -->
     <section class="about" id="about">
-        <div class="about-img">
+        <div class="about-img" data-aos="fade-right">
             <img src="Images/Image.png" alt="image">
         </div>
-        <div class="about-content">
+        <div class="about-content" data-aos="fade-left">
             <h2 class="heading">درباره <span>من</span></h2>
             <h3>فرانت دولوپر</h3>
             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون رایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی.</p>
@@ -90,7 +92,7 @@
         <div class="blur blurRight"></div>
         
         <div class="services-container">
-            <div class="services-box">
+            <div class="services-box"  data-aos="zoom-in">
                 <i class="bx bx-code-alt"></i>
                 <h3>طراح وب</h3>
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</p>
@@ -98,7 +100,7 @@
             </div>
 
             <div class="services-container">
-                <div class="services-box">
+                <div class="services-box"  data-aos="zoom-in">
                     <i class="bx bxs-paint"></i>
                     <h3>گرافیک دیزاینر</h3>
                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</p>
@@ -106,7 +108,7 @@
                 </div>
             
                 <div class="services-container">
-                    <div class="services-box">
+                    <div class="services-box" data-aos="zoom-in">
                         <i class="bx bx-bar-chart-alt"></i>
                         <h3>دیجیتال مارکتینگ</h3>
                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</p>
@@ -120,7 +122,7 @@
         <h2 class="heading">آخرین <span>پروژه ها</span></h2>
 
         <div class="portfolio-container">
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio1.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -129,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio2.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -138,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio3.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -147,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio4.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -156,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio5.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -165,7 +167,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="fade-up" data-os-duration="1000">
                 <img src="Images/portfolio6.jpg" alt="#">
                 <div class="portfolio-layer">
                     <h4>وب دیزاین</h4>
@@ -178,14 +180,13 @@
 
 
     <!-- contact section design -->
-
     <section class="contact" id="contact">
         <h2 class="heading"><span>ارتباط</span> با من</h2>
 
         <div class="blur"></div>
         <div class="blur"></div>
 
-        <form action="#">
+        <form action="#" data-aos="fade-up">
             <div class="input-box">
                 <input type="text" placeholder="نام و نام خانوادگی">
                 <input type="email" placeholder="ایمیل">
@@ -215,10 +216,16 @@
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <!-- Jquery -->
     <script src="Scripts/jquery.js"></script>
+    <!-- Type Writer JS -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- Aos JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer>
+        AOS.init();
+    </script>
     <!-- custom js -->
-    <script src="Scripts/main.js"></script>
+    <script src="Scripts/main.js" defer></script>
 </body>
 </html>
