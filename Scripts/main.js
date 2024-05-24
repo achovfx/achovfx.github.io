@@ -57,3 +57,22 @@ $('.loadingCircle').delay(2700).animate({opacity: '0'}, 500);
 $('body').delay(5000).queue(function(){
 	$('body').addClass("visibleSplash");
 });
+// Type Writer JS
+const app = document.querySelector("#changerText");
+
+let TypeWritter = new Typewriter(app, {
+    loop: true,
+});
+
+TypeWritter
+    .pauseFor(2000)
+    .typeString("Back-End Developer")
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString("& a little Front-End :)")
+    .pauseFor(1500)
+    .deleteAll()
+    .typeString('عجیبه :)))')
+    .pauseFor(1500)
+    .start();
+    
