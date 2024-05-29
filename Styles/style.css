@@ -239,6 +239,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .home-img img {
@@ -250,6 +251,7 @@ section {
 .home-content h3{
     font-size: 3.8rem;
     font-weight: 700;
+    /* text-align: center; */
 }
 .home-content h3.hiH3{
     margin-bottom: -2rem;
@@ -606,10 +608,10 @@ span {
 
     .navbar {
         position: absolute;
-        top: 100%;
+        top: 70px;
         left: 0;
         opacity: 0;
-        width: -100%;
+        width: 100%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0,0,0,.1);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
@@ -628,6 +630,79 @@ span {
         margin: 0!important;
         width: 100%;
         text-align: center;
+    }
+
+    #home {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .home-content{
+        text-align: center;
+    }
+    .home-img img {
+        width: 80vw;
+    }
+    .social-media a{
+        width: 7rem;
+        height: 7rem;
+    }
+    .social-media a i{
+        font-size: 3rem;
+    }
+    .btn{
+        width: 80%;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+
+    .about { 
+        flex-direction: column;
+        text-align: center;
+    }
+    .about h2.heading { 
+        text-align: center;
+        font-size: 8rem;
+    }
+    .about .about-img{ 
+        display: none;
+    }
+
+    /* Portfolio */
+
+    .portfolio-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-layer h4{
+        font-size: 4rem;
+    }
+    .portfolio-layer p{
+        font-size: 2rem;
+    }
+
+    .portfolio-layer a{
+        width: 6rem;
+        height: 6rem;
+    }
+    .portfolio-layer a i{
+        font-size: 3.5rem;
+    }
+    
+
+    .contact form .input-box input{
+        width: 100%;
+        height: 8vh;
+        background-color: #161616;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    .contact form textarea {
+        width: 100%;
+        background-color: #161616;
+        font-size: 2rem;
+        color: #fff;
     }
 }
 
