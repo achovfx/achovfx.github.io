@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('header nav a');
 const header = document.querySelector('header');
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-icon");
+const _ = document;
 
 // Navbar Color
 window.onscroll = () => {
@@ -37,17 +38,17 @@ window.onscroll = () => {
 
 menuBtn.addEventListener("click",()=>{
     if(navbar.style.opacity == 0){
-        navbar.style.width = 100+"%";
+        navbar.style.top = 70+"px";
         navbar.style.opacity = 1;
     }else{
-        navbar.style.width = 0+"%";
+        navbar.style.top = -400+"px";
         navbar.style.opacity = 0;
     }
 })
 
 
 // Menu =========================================================
-let menuIcon = document.querySelector
+
 
 // Intro =======================================================
 $('.loadingbar').delay(1500).animate({left: '0'}, 1000);
@@ -75,4 +76,7 @@ TypeWritter
     .typeString('عجیبه :)))')
     .pauseFor(1500)
     .start();
-    
+
+// Mobile View
+let select = elem => document.querySelector(elem);
+
