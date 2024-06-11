@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('header nav a');
 const header = document.querySelector('header');
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-icon");
+const sendMessageBtn = document.querySelector("input[type='submit']");
 const _ = document;
 
 // Navbar Color
@@ -24,12 +25,9 @@ window.onscroll = () => {
         if(window.scrollY >= 100){
             header.classList.add('sticky');
             header.classList.remove('transition3s');
-            
-            console.log("add");
         }else{
             header.classList.remove('sticky');
             header.classList.add('transition3s');
-            console.log("remove");
         }
 
     })
@@ -77,6 +75,75 @@ TypeWritter
     .pauseFor(1500)
     .start();
 
-// Mobile View
-let select = elem => document.querySelector(elem);
 
+// Fetching Comments
+// function sendMessage(name,email,mobile,emailTitle,text){
+
+//     let message = {
+//         name: name,
+//         email: email,
+//         mobile: mobile,
+//         email_title: emailTitle,
+//         text: text
+//     };
+
+//     fetch("https://achovfx-default-rtdb.asia-southeast1.firebasedatabase.app/comments.json",{
+//     method: "POST",
+//     headers: {
+//         "Content-type": "application/json"
+//     },
+//     body: JSON.stringify(message)
+//     })
+//     .then((res)=> console.log(res))
+//     .catch((err)=> console.log(err))
+// }
+
+sendMessageBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let mName = _.querySelector(".mName");
+    let mEmail = _.querySelector(".mEmail");
+    let mMobile = _.querySelector(".mMobile");
+    let mEmailTitle = _.querySelector(".mEmailTitle");
+    let mText = _.querySelector(".mText");
+
+    if(!mName.value || !mEmail.value || !mMobile.value || !mEmailTitle.value || !mText.value){
+        alert("Fill All Boxes");
+    }else{
+        let message = {
+            name: mName.value,
+            email: mEmail.value,
+            mobile: mMobile.value,
+            email_title: mEmailTitle.value,
+            text: mText.value,
+        };
+        fetch("https://achovfx-default-rtdb.asia-southeast1.firebasedatabase.app/nazarat.json",{
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(message)
+        })
+        .then((res)=> console.log(res))
+        .then(()=> {
+            mName.value= "";
+            mEmail.value= "";
+            mMobile.value= "";
+            mEmailTitle.value= "";
+            mText.value= "";
+        })
+        .then(()=> {
+            Swal.fire(
+                'ارسال شد',
+                'پیام شما با موفقیت ارسال شد',
+                'success'
+            );
+        })
+        .catch(()=> {
+            Swal.fire(
+                'مشکل',
+                'لطفا اینترنت خود رو بررسی کنید',
+                'error'
+            );
+        })
+    }
+})
