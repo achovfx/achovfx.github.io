@@ -552,6 +552,10 @@ span {
     color: var(--second-bg-color);
 }
 
+.footer-iconTop {
+    cursor: pointer;
+}
+
 /* Animations */
 @keyframes floatImage{
     0% {
