@@ -75,6 +75,10 @@ TypeWritter
     .pauseFor(1500)
     .start();
 
+// Go to Top Btn
+function goToTop(){
+    window.scrollTo(0,0);
+}
 
 // Fetching Comments
 // function sendMessage(name,email,mobile,emailTitle,text){
@@ -98,52 +102,52 @@ TypeWritter
 //     .catch((err)=> console.log(err))
 // }
 
-sendMessageBtn.addEventListener("click",(e)=>{
-    e.preventDefault();
-    let mName = _.querySelector(".mName");
-    let mEmail = _.querySelector(".mEmail");
-    let mMobile = _.querySelector(".mMobile");
-    let mEmailTitle = _.querySelector(".mEmailTitle");
-    let mText = _.querySelector(".mText");
+// sendMessageBtn.addEventListener("click",(e)=>{
+//     e.preventDefault();
+//     let mName = _.querySelector(".mName");
+//     let mEmail = _.querySelector(".mEmail");
+//     let mMobile = _.querySelector(".mMobile");
+//     let mEmailTitle = _.querySelector(".mEmailTitle");
+//     let mText = _.querySelector(".mText");
 
-    if(!mName.value || !mEmail.value || !mMobile.value || !mEmailTitle.value || !mText.value){
-        alert("Fill All Boxes");
-    }else{
-        let message = {
-            name: mName.value,
-            email: mEmail.value,
-            mobile: mMobile.value,
-            email_title: mEmailTitle.value,
-            text: mText.value,
-        };
-        fetch("https://achovfx-default-rtdb.asia-southeast1.firebasedatabase.app/nazarat.json",{
-        method: "POST",
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(message)
-        })
-        .then((res)=> console.log(res))
-        .then(()=> {
-            mName.value= "";
-            mEmail.value= "";
-            mMobile.value= "";
-            mEmailTitle.value= "";
-            mText.value= "";
-        })
-        .then(()=> {
-            Swal.fire(
-                'ارسال شد',
-                'پیام شما با موفقیت ارسال شد',
-                'success'
-            );
-        })
-        .catch(()=> {
-            Swal.fire(
-                'مشکل',
-                'لطفا اینترنت خود رو بررسی کنید',
-                'error'
-            );
-        })
-    }
-})
+//     if(!mName.value || !mEmail.value || !mMobile.value || !mEmailTitle.value || !mText.value){
+//         alert("Fill All Boxes");
+//     }else{
+//         let message = {
+//             name: mName.value,
+//             email: mEmail.value,
+//             mobile: mMobile.value,
+//             email_title: mEmailTitle.value,
+//             text: mText.value,
+//         };
+//         fetch("https://achovfx-default-rtdb.asia-southeast1.firebasedatabase.app/nazarat.json",{
+//         method: "POST",
+//         headers: {
+//             "Content-type": "application/json"
+//         },
+//         body: JSON.stringify(message)
+//         })
+//         .then((res)=> console.log(res))
+//         .then(()=> {
+//             mName.value= "";
+//             mEmail.value= "";
+//             mMobile.value= "";
+//             mEmailTitle.value= "";
+//             mText.value= "";
+//         })
+//         .then(()=> {
+//             Swal.fire(
+//                 'ارسال شد',
+//                 'پیام شما با موفقیت ارسال شد',
+//                 'success'
+//             );
+//         })
+//         .catch(()=> {
+//             Swal.fire(
+//                 'مشکل',
+//                 'لطفا اینترنت خود رو بررسی کنید',
+//                 'error'
+//             );
+//         })
+//     }
+// })
