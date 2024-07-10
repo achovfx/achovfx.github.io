@@ -80,6 +80,26 @@ function goToTop(){
     window.scrollTo(0,0);
 }
 
+// Updating Message
+function showUpdatingMessage(){
+    Swal.fire(
+        'مشکل',
+        'قعلا سایت درحال ساخت است 📣',
+        'error'
+    );
+}
+
+sendMessageBtn.addEventListener("click",(e)=>{
+	e.preventDefault();
+	showUpdatingMessage();
+})
+
+document.querySelectorAll(".btn").forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+        showUpdatingMessage();
+    })
+})
+
 // Fetching Comments
 // function sendMessage(name,email,mobile,emailTitle,text){
 
@@ -101,15 +121,6 @@ function goToTop(){
 //     .then((res)=> console.log(res))
 //     .catch((err)=> console.log(err))
 // }
-
-sendMessageBtn.addEventListener("click",(e)=>{
-	e.preventDefault();
-	Swal.fire(
-                'مشکل',
-                'قعلا سایت درحال ساخت است 📣',
-        	'error'
-        );
-})
 
 // sendMessageBtn.addEventListener("click",(e)=>{
 //     e.preventDefault();
