@@ -402,6 +402,7 @@ span {
     justify-content: center;
     gap: 4px;
     align-items: end;
+    width: 70%;
 }
 
 .about-content h2 {
