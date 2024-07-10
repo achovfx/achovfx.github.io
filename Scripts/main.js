@@ -102,6 +102,15 @@ function goToTop(){
 //     .catch((err)=> console.log(err))
 // }
 
+sendMessageBtn.addEventListener("click",(e)=>{
+	e.preventDefault();
+	Swal.fire(
+                'مشکل',
+                'قعلا سایت درحال ساخت است 📣',
+        	'error'
+        );
+})
+
 // sendMessageBtn.addEventListener("click",(e)=>{
 //     e.preventDefault();
 //     let mName = _.querySelector(".mName");
