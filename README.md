@@ -1,3 +1,21 @@
 Website Address: https://achovfx.github.io
 
-![Untitled-2](https://github.com/achovfx/achovfx.github.io/assets/89105046/ced3ce96-7274-4993-9655-7ac2ca59a969)
+**🌟 Overview:**
+A sleek and responsive personal portfolio website designed to showcase skills, services, and projects. Built with HTML, CSS, and JavaScript.
+
+**✨ Features:**
+- 🌐 Fully responsive design for all devices
+- 🎨 Minimalistic and modern UI
+- 📥 Downloadable resume and 📬 contact form
+
+**🚀 How to Run:**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/achovfx/achovfx.github.io
+   ```
+2. Open `index.html` in your browser.
+
+**🔮 Future Enhancements:**
+- 🌙 Dark mode support
+- 🔗 Backend integration for dynamic content
+---
